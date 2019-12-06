@@ -11,7 +11,9 @@ from collections import Counter
 
 def words(text): return re.findall(r'\w+', text.lower())
 
-WORDS = Counter(words(open('big.txt').read()))
+# make sure there's a file called 'big.txt' in the same 
+# folder 
+WORDS = Counter(words(open('big.txt').read()))  # creates type of dict
 
 def P(word, N=sum(WORDS.values())): 
     "Probability of `word`."
